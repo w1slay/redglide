@@ -60,7 +60,7 @@ const BRAND_INFO = {
 function brandInfo(brand){ return BRAND_INFO[brand] || {name:brand, domain:""}; }
 function brandName(brand){ return brandInfo(brand).name; }
 function brandHtml(brand){
-  const b=brandInfo(brand), logo=b.domain ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(b.domain)}&sz=128` : "";
+  const b=brandInfo(brand), logo=b.name === "KuKirin" ? "assets/kukirin-logo.png" : (b.domain ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(b.domain)}&sz=128` : "");
   const initials=b.name.split(/\s+/).map(x=>x[0]).join("").slice(0,3).toUpperCase();
   return `<span class="brand-lockup"><span class="brand-logo">${logo?`<img src="${logo}" alt="Logo ${esc(b.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">`:``}<span class="brand-fallback">${esc(initials)}</span></span><span>${esc(b.name)}</span></span>`;
 }
