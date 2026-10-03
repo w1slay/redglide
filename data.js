@@ -152,9 +152,9 @@ const SCOOTERS = [
   },
   {
     id:"fynzoS11", image:"https://a.allegroimg.com/original/116ef9/78bee05c400e87b83f2af87e73ad/Elektromos-jarmu-Fynzo-S11-1100W-15-6Ah-60km-45km-h-NFC", brand:"Fynzo", model:"S11", price:"À vérifier", badge:"NOUVEAU",
-    motor:"À vérifier", battery:"À vérifier", range:"À vérifier", speed:"À vérifier",
-    legalSpeed:"25 km/h", derestricted:"Selon version", weight:"À vérifier", load:"À vérifier",
-    tire:"À vérifier", brakes:"À vérifier", suspension:"À vérifier", waterproof:"À vérifier", charge:"À vérifier",
+    motor:"800 W", battery:"48 V • 15,6 Ah", range:"60 km", speed:"25",
+    legalSpeed:"25 km/h", derestricted:"45 km/h", weight:"25 kg", load:"130 kg",
+    tire:"10 × 2,5 pouces", brakes:"E-ABS + disques AV/AR", suspension:"fourche avant + double bras oscillant arrière", waterproof:"IP54", charge:"8h",
     summary:"Fiche ajoutée au catalogue RedGlide. Les valeurs marquées « à vérifier » doivent être remplacées par celles de la version exacte.",
     pros:["Modèle ajouté à la base RedGlide","Fiche prête pour comparaison"],
     cons:["Certaines caractéristiques dépendent de la version"],
