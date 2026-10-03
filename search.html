@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RedGlide — Commencer la recherche</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="search">
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">R</span><span>RED<span>GLIDE</span></span></a><button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button></header>
+<div class="mega-menu" id="megaMenu"><div class="menu-inner">
+<a href="search.html"><b>🛴 Trottinettes</b><small>Comparer les modèles électriques</small></a><a href="velo.html"><b>🚲 Vélos électriques</b><small>Mêmes outils, catégorie vélo</small></a><a href="voiture.html"><b>🚗 Voitures</b><small>Comparer prix, autonomie, puissance…</small></a><a href="mailto:redglidebike@gmail.com"><b>✉️ Contact RedGlide</b><small>redglidebike@gmail.com</small></a>
+</div></div>
+<main class="page">
+  <div class="eyebrow">ÉTAPE 01 / 02</div>
+  <h1 class="page-title">Commencer la recherche<span>.</span></h1>
+  <p class="lead">Choisis deux trottinettes. Tu peux rechercher par marque ou modèle.</p>
+  <div class="search-box"><input id="modelSearch" placeholder="Rechercher une marque ou un modèle…" autocomplete="off"><span>⌕</span></div>
+  <div id="modelList" class="model-list"></div>
+  <div class="selection-bar">
+    <div><small>TON COMPARATIF</small><div id="selectedNames">Sélectionne 2 modèles</div></div>
+    <button id="compareBtn" class="primary-btn" disabled>Comparer <span>→</span></button>
+  </div>
+</main>
+<footer><div><b>REDGLIDE</b> — Créé par w1slay</div><div>Astuce : toutes les données se modifient dans <code>data.js</code>.</div></footer>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
