@@ -38,7 +38,7 @@ const SCOOTERS = [
     honest:"Ce n’est pas le choix rationnel pour tout le monde : son intérêt est la performance et la capacité, pas la simplicité d’un trajet quotidien."
   },
   {
-    id:"l2", image:"https://www.ausom.com/cdn/shop/files/L2-1_fc22b68f-573c-4091-a71c-deb6937298b6.jpg?v=1747932926&width=1000", brand:"Ausom", model:"L2", price:"À vérifier", badge:"BUZZ",
+    id:"l2", image:"https://www.ausom.com/cdn/shop/files/L2-1_fc22b68f-573c-4091-a71c-deb6937298b6.jpg?v=1747932926&width=1000", brand:"Ausom", model:"L2", price:"459 €", badge:"BUZZ",
     motor:"800 W", battery:"48 V • 15,6 Ah", range:"70 km", speed:"45 km/h*", 
     legalSpeed:"20 km/h (fiche ABE/UE selon version)", derestricted:"45 km/h*", weight:"29,2 kg", load:"130 kg",
     tire:"10 × 3 pouces", brakes:"E-ABS + disques AV/AR", suspension:"ShocFree",
@@ -49,7 +49,7 @@ const SCOOTERS = [
     honest:"Intéressante si le confort et la stabilité comptent plus que le poids minimal. Vérifie la version exacte avant achat."
   },
   {
-    id:"l1", image:"https://www.ausom.com/cdn/shop/files/L1-4_2bcd9567-520b-480c-ab84-97f1876bb58d.jpg?v=1747932926&width=1000", brand:"Ausom", model:"L1", price:"À vérifier", badge:"BUZZ",
+    id:"l1", image:"https://www.ausom.com/cdn/shop/files/L1-4_2bcd9567-520b-480c-ab84-97f1876bb58d.jpg?v=1747932926&width=1000", brand:"Ausom", model:"L1", price:"549,00 €", badge:"BUZZ",
     motor:"800 W (fiche comparative)", battery:"48 V • 15,6 Ah", range:"≈70 km", speed:"≈45 km/h*",
     legalSpeed:"Selon version", derestricted:"Selon version", weight:"≈27,6 kg", load:"130 kg",
     tire:"10 × 2,75 pouces", brakes:"E-ABS + disques AV/AR", suspension:"ShocFree",
