@@ -28,8 +28,7 @@ function adHtml(){
   return `<section class="redglide-ad">
     <div class="ad-label">${esc(AD_CONFIG.label)}</div>
     <div class="ad-content">${image}<div class="ad-copy"><h3>${esc(AD_CONFIG.title)}</h3><p>${esc(AD_CONFIG.text)}</p><a class="primary-btn ad-btn" href="${esc(AD_CONFIG.link)}" target="_blank" rel="noopener sponsored">${esc(AD_CONFIG.button)} →</a></div></div>
-  </section>
-  ${adHtml()}`;
+  </section>`;
 }
 
 const BRAND_INFO = {
@@ -127,8 +126,7 @@ function initCompare(){
     <article><div class="eyebrow">POINTS FORTS</div><h3>${brandName(b.brand)} ${esc(b.model)}</h3><ul>${(b.pros||[]).map(x=>`<li>+ ${esc(x)}</li>`).join("")}</ul><p>${esc(b.honest)}</p></article>
   </div>
   <section class="honest"><div class="eyebrow">AVIS REDGLIDE</div><h2>Laquelle choisir honnêtement ?</h2><p>Il n’y a pas un vainqueur universel : le meilleur choix dépend de ton usage, de ton budget, du poids que tu peux transporter et des règles applicables. Utilise les différences ci-dessus pour choisir selon ton besoin réel.</p>
-  </section>
-  ${adHtml()}`;
+  </section>`;
 }
 function initCategory(){
   const path=location.pathname;
