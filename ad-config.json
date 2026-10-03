@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "label": "PUBLICITÉ",
+  "title": "Ton annonce ici",
+  "text": "Ajoute ici ton texte publicitaire, une offre, un code promo ou un partenaire.",
+  "image": "",
+  "link": "https://example.com",
+  "button": "Découvrir"
+}

@@ -12,7 +12,7 @@ function setupMenu(){
 // =====================
 // Modifie uniquement ces valeurs pour changer la publicité affichée
 // en bas de chaque page de comparaison.
-const AD_CONFIG = {
+const AD_DEFAULTS = {
   enabled: true,
   label: "PUBLICITÉ",
   title: "Ton annonce ici",
@@ -21,6 +21,18 @@ const AD_CONFIG = {
   link: "https://example.com",
   button: "Découvrir"
 };
+let AD_CONFIG = {...AD_DEFAULTS};
+
+async function loadAdConfig(){
+  try{
+    const r=await fetch(`ad-config.json?v=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok) throw new Error("ad-config.json introuvable");
+    const data=await r.json();
+    AD_CONFIG={...AD_DEFAULTS,...data};
+  }catch(e){
+    AD_CONFIG={...AD_DEFAULTS};
+  }
+}
 
 function adHtml(){
   if(!AD_CONFIG.enabled) return "";
@@ -126,7 +138,8 @@ function initCompare(){
     <article><div class="eyebrow">POINTS FORTS</div><h3>${brandName(b.brand)} ${esc(b.model)}</h3><ul>${(b.pros||[]).map(x=>`<li>+ ${esc(x)}</li>`).join("")}</ul><p>${esc(b.honest)}</p></article>
   </div>
   <section class="honest"><div class="eyebrow">AVIS REDGLIDE</div><h2>Laquelle choisir honnêtement ?</h2><p>Il n’y a pas un vainqueur universel : le meilleur choix dépend de ton usage, de ton budget, du poids que tu peux transporter et des règles applicables. Utilise les différences ci-dessus pour choisir selon ton besoin réel.</p>
-  </section>`;
+  </section>
+  ${adHtml()}`;
 }
 function initCategory(){
   const path=location.pathname;
@@ -139,5 +152,8 @@ function initCategory(){
     root.innerHTML=CARS.map(v=>`<article class="category-card"><span>🚗</span><div>${brandHtml(v.brand)}<h3>${esc(v.model)}</h3></div><dl><dt>Prix</dt><dd>${esc(v.price)}</dd><dt>Puissance</dt><dd>${esc(v.power)}</dd><dt>Autonomie</dt><dd>${esc(v.range)}</dd><dt>0–100</dt><dd>${esc(v.zero100)}</dd><dt>Poids</dt><dd>${esc(v.weight)}</dd></dl><small>${esc(v.extra)}</small></article>`).join("");
   }
 }
-setupMenu();
-initHome(); initSearch(); initCompare(); initCategory();
+(async function boot(){
+  await loadAdConfig();
+  setupMenu();
+  initHome(); initSearch(); initCompare(); initCategory();
+})();
