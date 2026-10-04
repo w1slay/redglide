@@ -1,9 +1,9 @@
 {
   "enabled": true,
-  "label": "PUBLICITÉ",
-  "title": "Ton annonce ici",
-  "text": "Ajoute ici ton texte publicitaire, une offre, un code promo ou un partenaire.",
-  "image": "",
-  "link": "https://example.com",
+  "label": "Promotion !",
+  "title": "Promo !",
+  "text": "Kukurin g2 a petit prix ici",
+  "image": "https://img.gkbcdn.com/s3/p/2024-06-14/Kukirin-G2-Electric-Scooter-800W-48V-15Ah-524848-3.jpg",
+  "link": "https://kukirin-france.com/products/kukirin-g2-electric-scooter",
   "button": "Découvrir"
 }
